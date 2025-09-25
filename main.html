@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Форум — Главная</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Tektur:wght@400..900&display=swap');
+
+      html, body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: url("3.jpg") no-repeat center center fixed;
+        background-size: cover;
+        font-family: "Tektur", sans-serif;
+        color: #e0e0e0;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+      }
+
+      nav {
+        background: #111 !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+      }
+
+      .box {
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #232526, #414345);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      }
+
+      .box h1 {
+        font-size: 2.8rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        letter-spacing: 2px;
+      }
+
+      /* 🔹 Новый блок home */
+      .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        padding: 60px 9%;
+      }
+
+      .home-content h3 {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      .home-content h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+
+      .home-content span {
+        color: #0ef;
+      }
+
+      .home-content p {
+        font-size: 1.4rem;
+        margin-top: 15px;
+        color: #ddd;
+      }
+
+      .home-img img {
+        width: 25vw;
+        border-radius: 15%;
+        box-shadow: 1px 1px 50px 1px rgba(0, 238, 255, 0.15);
+      }
+
+      .content {
+        flex: 1;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 1.5rem;
+        background: rgba(30,30,30,0.9);
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+        animation: fadeIn 1s ease-in;
+      }
+
+      .content h2 {
+        color: #66ccff;
+        margin-bottom: 1rem;
+        border-left: 6px solid #3498db;
+        padding-left: 0.6rem;
+      }
+
+      .content p {
+        color: #ddd;
+        line-height: 1.6;
+      }
+
+      .features {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .feature-box {
+        background: #222;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        transition: transform 0.3s;
+      }
+
+      .feature-box:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-box h4 {
+        color: #4da6ff;
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        background: #111;
+        color: #bbb;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 -4px 12px rgba(0,0,0,0.7);
+      }
+
+      footer p {
+        margin-top: 0;
+        color: #888;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* 🔹 Мобильная адаптация */
+      @media (max-width: 768px) {
+        .home {
+          flex-direction: column; /* блоки один под другим */
+          gap: 30px;
+          padding: 40px 5%;
+        }
+
+        .home-img img {
+          width: 80%; /* уменьшаем картинку */
+          max-width: 300px; /* чтобы не расплывалась */
+        }
+
+        .home-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .home-content h3 {
+          font-size: 1.8rem;
+        }
+
+        .home-content p {
+          font-size: 1.1rem;
+        }
+
+        .content {
+          margin: 20px;
+          padding: 1rem;
+        }
+
+        .logo {
+      height: 80px;          /* твой нужный размер */
+      width: auto;
+      margin-right: 12px;
+      position: relative;
+      top: -10px;            /* подвинь вверх, чтобы не тянул navbar */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="main.html">
+      <img src="logo.png" alt="Лого" class="logo"> BulBul
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="main.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Посты</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Участники</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🔹 Шапка -->
+  <div class="box">
+    <h1>Добро пожаловать на форум</h1>
+  </div>
+
+  <!-- 🔹 Новый блок (как "Hello it's me") -->
+  <section class="home" id="home">
+    <div class="home-content">
+      <h3>Привет!</h3>
+      <h3>Про наш <span>Форум!</span></h3>
+      <p>
+        Здесь мы делимся мыслями, обсуждаем идеи и находим единомышленников.  
+        Присоединяйся к нашему сообществу!
+      </p>
+    </div>
+
+    <div class="home-img">
+      <img src="13.png" alt="Forum Image" />
+    </div>
+  </section>
+
+  <div class="content">
+    <h2>О форуме</h2>
+    <p>Наш форум создан для того, чтобы объединить людей со схожими интересами. 
+       Здесь вы можете делиться мыслями, обсуждать важные темы, задавать вопросы 
+       и находить единомышленников.</p>
+    <p>Мы ценим уважение, дружескую атмосферу и свободу высказываний. 
+       Каждый участник может внести свой вклад в развитие сообщества.</p>
+
+    <h2>Почему стоит присоединиться?</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h4>💬 Общение</h4>
+        <p>Находите новых друзей и делитесь своим мнением.</p>
+      </div>
+      <div class="feature-box">
+        <h4>📚 Знания</h4>
+        <p>Обсуждайте разные темы и учитесь новому.</p>
+      </div>
+      <div class="feature-box">
+        <h4>🌍 Сообщество</h4>
+        <p>Станьте частью дружной и открытой команды.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>Почему именно наш форум?</h2>
+    <p>Мы создали форум, где удобно общаться, задавать вопросы и обмениваться знаниями. 
+    Здесь нет лишнего шума — только полезные дискуссии, дружелюбная атмосфера и возможность найти новых друзей и партнёров.</p>
+    <p>Мы верим, что сильное сообщество строится на доверии. Поэтому наш форум — это безопасное пространство, где каждый может открыто высказаться и быть услышанным.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Мой форум | Сделано с ❤️</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

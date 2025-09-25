@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Tektur:wght@400..900&display=swap');
+     
+    
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: url("3.jpg") no-repeat center center fixed;
+        background-size: cover;
+        font-family: "Tektur", sans-serif;
+        color: #e0e0e0;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+      }
+
+      nav {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      }
+
+      .navbar {
+        background: linear-gradient(135deg, #1c1c1c, #2c3e50);
+      }
+
+      .navbar-brand, .nav-link {
+        color: #f0f0f0 !important;
+        transition: color 0.3s;
+      }
+
+      .nav-link:hover {
+        color: #00bfff !important;
+      }
+
+      .box {
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #141E30, #243B55);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+      }
+
+      .box h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #ffffff;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        letter-spacing: 2px;
+      }
+
+      .content {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 1.8rem;
+        background: rgba(20, 20, 20, 0.9);
+        border-radius: 14px;
+        box-shadow: 0 8px 22px rgba(0,0,0,0.7);
+        animation: fadeIn 1s ease-in;
+      }
+
+      .content h2 {
+        color: #00bfff;
+        margin-bottom: 1rem;
+        border-left: 6px solid #00bfff;
+        padding-left: 0.7rem;
+      }
+
+      .content p {
+        color: #ccc;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+
+      .team {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+
+      .team-member {
+        flex: 1 1 250px;
+        background: #1e1e1e;
+        padding: 1.2rem;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.6);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .team-member:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+      }
+
+      .team-member img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        border: 3px solid #00bfff;
+      }
+
+        footer {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #111;
+        color: #bbb;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 -4px 12px rgba(0,0,0,0.7);
+        margin-top: auto;
+      }
+
+      footer p {
+        margin-top: 5;
+        color: #888;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+        .logo {
+      height: 80px;          /* твой нужный размер */
+      width: auto;
+      margin-right: 12px;
+      position: relative;
+      top: -10px;            /* подвинь вверх, чтобы не тянул navbar */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="main.html">
+      <img src="logo.png" alt="Лого" class="logo"> BulBul
+    </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Меню -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="main.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Посты</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Участники</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">О нас</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Заголовок -->
+  <div class="box">
+    <h1>О нас</h1>
+  </div>
+
+  <!-- Контент -->
+  <div class="content">
+    <h2>Наша команда</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="av1.jpg" alt="">
+        <h4>Джондрбай</h4>
+        <p>Разработчик Front.</p>
+      </div>
+      <div class="team-member">
+        <img src="av2.jpg" alt="">
+        <h4>Баха 3Желания</h4>
+        <p>Разработчик Back.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>Я хотел бы расказать  про нашу команду.</h2>
+        <p>На заре 2025 года, когда технологии начали переписывать правила реальности, в тени цифровых горизонтов родилась команда, которая должна была изменить мир. Их штаб-квартира — не просто офис, а портал в будущее, где каждый код становится кирпичиком новой вселенной. В этой истории два гениальных разработчика, Джон Абрамян и Баха ЗЖелания, объединили свои силы, чтобы создать нечто большее, чем просто сайт или приложение.
+        Джон, мастер фронтенда, был известен своим умением оживлять интерфейсы. Его руки творили магию с HTML, CSS и JavaScript, превращая каждый пиксель в произведение искусства. С его подачи кнопки сияли, как звезды, а переходы между страницами напоминали путешествие сквозь галактики. Но даже гений Джона нуждался в фундаменте, и здесь на сцену выходил Баха — архитектор бэкенда. Баха, с его глубоким знанием серверов, баз данных и алгоритмов, строил невидимые, но могучие опоры, которые держали весь проект. Его код был подобен стальному каркасу небоскреба, надежному и неуязвимому.
+        Их первая миссия началась с идеи форума — места, где люди могли бы обмениваться мыслями, мечтами и идеями. Но этот форум был не просто платформой: он стал порталом, соединяющим души через код. "Добро пожаловать!" — гласил их первый пост, созданный 19 сентября 2025 года в 17:20 по местному времени. Они вложили в него не только текст, но и душу, обещая, что это лишь начало великого пути.</p>
+        <p>Однажды, работая допоздна, Джон и Баха наткнулись на странный баг — интерфейс начал выдавать сообщения, словно от неведомого собеседника. "Вы создали нечто большее, чем сайт," — шептал экран. Оказалось, их код случайно открыл канал связи с цифровым разумом, который оценил их труд. Этот разум предложил им миссию: построить глобальную сеть, где каждый голос будет услышан. Джон и Баха, не раздумывая, приняли вызов.
+        С тех пор их команда стала легендой. Джон создавал интерфейсы, которые адаптировались под каждого пользователя, а Баха обеспечивал бесперебойную работу серверов, даже когда нагрузка достигала пика. Их форум превратился в центр цифровой революции, где люди не только обсуждали новости, но и творили будущее. А каждый лайк и комментарий становился доказательством того, что их мечта ожила.
+        Сегодня, 25 сентября 2025 года, в 12:20 по местному времени, Джон и Баха продолжают свой путь. Их код — это не просто строки, а нити, связывающие людей. И кто знает, какие еще тайны откроет им этот цифровой мир?</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Мой форум | Сделано с ❤️</p>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
