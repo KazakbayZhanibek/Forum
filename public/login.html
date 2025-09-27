@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация | Форум</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Michroma&family=Tektur:wght@400..900&display=swap');
+     
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      min-height: 100vh;
+      background: url("images/3.jpg") no-repeat center center fixed;
+      font-family: "Tektur", sans-serif;
+      color: #e0e0e0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+
+    nav {
+      background: #111 !important;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    .box {
+      height: 180px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #232526, #414345);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+
+    .box h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+      letter-spacing: 2px;
+    }
+
+    .registration-container {
+      max-width: 500px;
+      width: 100%;
+      margin: 40px auto;
+      padding: 2rem;
+      background: rgba(30,30,30,0.9);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      animation: fadeIn 1s ease-in;
+    }
+
+    .registration-container h2 {
+      color: #66ccff;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 0.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #ccc;
+      font-weight: 500;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #444;
+      background: #111;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #3498db;
+      box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
+    }
+
+    .btn-register {
+      width: 100%;
+      background: linear-gradient(135deg, #1e1e2f, #2c2c44);
+      color: #e0e0e0;
+      border: 1px solid #3a3a5c;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 150, 255, 0.3);
+      margin-top: 1rem;
+    }
+
+    .btn-register:hover {
+      background: linear-gradient(135deg, #2c2c44, #1e1e2f);
+      box-shadow: 0 0 15px rgba(0, 150, 255, 0.6);
+      color: #fff;
+      transform: scale(1.02);
+    }
+
+    .form-footer {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid #444;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    footer {
+      background: #111;
+      color: #bbb;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.7);
+      margin-top: auto; /* чтобы футер прижимался вниз */
+    }
+
+    footer p {
+      margin: 0;
+      color: #888;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .error-message {
+      color: #ff6b6b;
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+      display: none;
+    }
+
+    .success-message {
+      display: none;
+      background: rgba(46, 204, 113, 0.2);
+      border: 1px solid #2ecc71;
+      color: #2ecc71;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .logo {
+      height: 80px;  
+      width: auto;
+      margin-right: 12px;
+      position: relative;
+      top: -10px;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="">
+        <img src="images/logo.png" alt="Лого" class="logo"> BulBul
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="box">
+      <h1>Вход</h1>
+    </div>
+
+    <div class="registration-container">
+      <h2>Войти в аккаунт</h2>
+
+      <div class="form-group">
+        <label for="email">Электронная почта</label>
+        <input type="email" class="form-control" id="email" placeholder="Введите email" required>
+        <div class="error-message" id="emailError">Введите корректный email адрес</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input type="password" class="form-control" id="password" placeholder="Введите пароль" required>
+        <div class="error-message" id="passwordError">Пароль должен содержать не менее 8 символов</div>
+      </div>
+      
+      <button type="submit" class="btn-register">Войти</button>
+      
+      <div class="success-message" id="successMessage">
+        Вход успешен! Теперь вы можете войти в систему.
+      </div>
+
+      <div class="form-footer">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Мой форум | Сделано с ❤️</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
